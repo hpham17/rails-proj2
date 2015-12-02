@@ -13,6 +13,8 @@
     <% if student_signed_in? %>
     <li><%= link_to 'Edit Your Profile',edit_student_registration_path  %></li>
     <li><%= link_to 'Log Out', destroy_student_session_path, :method=>'delete' %></li>
+    <li><%= link_to 'Teaching Assistants', teaching_assistants_path %></li>
+    <li><%= link_to 'Instructors', admins_path %></li>
   <% elsif admin_signed_in? %>
     <li><%= link_to 'Log In', new_student_session_path %></li>
     <li><%= link_to 'Join Evaluate.Me', new_student_registration_path %></li>
