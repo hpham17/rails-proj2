@@ -1,0 +1,28 @@
+<%# navigation styled for Zurb Foundation 5 %>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name"><%= link_to 'Evaluate.Me', root_path %></li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+  <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <% if student_signed_in? %>
+    <li><%= link_to 'Edit Your Profile',edit_student_registration_path  %></li>
+    <li><%= link_to 'Log Out', destroy_student_session_path, :method=>'delete' %></li>
+  <% elsif admin_signed_in? %>
+    <li><%= link_to 'Log In', new_student_session_path %></li>
+    <li><%= link_to 'Join Evaluate.Me', new_student_registration_path %></li>
+    <% elsif teaching_assistant_signed_in? %>
+    <li><%= link_to 'Log In', new_student_session_path %></li>
+    <li><%= link_to 'Join Evaluate.Me', new_student_registration_path %></li>
+    <% else %>
+    <li><%= link_to 'Log In', new_student_session_path %></li>
+    <li><%= link_to 'Join Evaluate.Me', new_student_registration_path %></li>
+  <% end %>
+  </ul>
+</div>
+</nav>
