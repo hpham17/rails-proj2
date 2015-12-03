@@ -1,6 +1,8 @@
 <%= simple_form_for @feedback do |p| %>
 	<%= p.input :title %>
-	<%= p.input :rating %>
+	<%= p.input :rating, collection: [6, 5, 4, 3, 2, 1]%>
 	<%= p.input :eval %>
-	<%= p.button :submit %>
+	<%= p.association :admin, :value_method => :id %>
+	<%= p.button :submit %>	
+     
 <% end %>

@@ -37,8 +37,10 @@ ActiveRecord::Schema.define(version: 20151202034505) do
     t.string   "title"
     t.integer  "rating"
     t.text     "eval"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "admin_id"
+    t.integer  "teaching_assistant_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "students", force: :cascade do |t|

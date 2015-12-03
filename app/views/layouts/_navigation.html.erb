@@ -11,16 +11,18 @@
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
     <% if student_signed_in? %>
+    <li><%= link_to 'Instructors', admins_path %></li>
+    <li><%= link_to 'Teaching Assistants', teaching_assistants_path %></li>
     <li><%= link_to 'Edit Your Profile',edit_student_registration_path  %></li>
     <li><%= link_to 'Log Out', destroy_student_session_path, :method=>'delete' %></li>
-    <li><%= link_to 'Teaching Assistants', teaching_assistants_path %></li>
-    <li><%= link_to 'Instructors', admins_path %></li>
   <% elsif admin_signed_in? %>
-    <li><%= link_to 'Log In', new_student_session_path %></li>
-    <li><%= link_to 'Join Evaluate.Me', new_student_registration_path %></li>
+   <li><%= link_to 'View Your Evaluations', admin_show_path(:id => current_admin.id) %></li>
+    <li><%= link_to 'Edit Your Profile',edit_admin_registration_path  %></li>
+    <li><%= link_to 'Log Out', destroy_admin_session_path, :method=>'delete' %></li>
     <% elsif teaching_assistant_signed_in? %>
-    <li><%= link_to 'Log In', new_student_session_path %></li>
-    <li><%= link_to 'Join Evaluate.Me', new_student_registration_path %></li>
+    <li><%= link_to 'View Your Evaluations', ta_show_path(:id => current_teaching_assistant.id)  %></li>
+    <li><%= link_to 'Edit Your Profile',edit_teaching_assistant_registration_path  %></li>
+    <li><%= link_to 'Log Out', destroy_teaching_assistant_session_path, :method=>'delete' %></li>
     <% else %>
     <li><%= link_to 'Log In', new_student_session_path %></li>
     <li><%= link_to 'Join Evaluate.Me', new_student_registration_path %></li>
