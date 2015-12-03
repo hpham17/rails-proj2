@@ -1,7 +1,12 @@
 <% if admin_signed_in? %>
-<h1>Your Evalutions</h1>
+<h1>Your Evaluations</h1>
 <%= @feedback.each do |f| %>
-    <%= f.eval %>
+    <div class="thumbnail">
+        <div class="title"><%= f.title %></div>
+        <div class="caption"><%= f.created_at %></div>
+         <p>Rating: <%= f.rating %></p>
+        <p>Evaluation: <%= f.eval %></p>
+    </div>
     <% end %>
 <% else %>
 <%= button_to "Evaluate Me", new_feedback_path, :class => "button medium", :method => :get %>

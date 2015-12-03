@@ -104,3 +104,22 @@ section {
   float:left;
   padding: 0 10px 5px 0;
 }
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+.thumbnail .title {
+    font-weight: bold;
+}
+.thumbnail .caption {
+    padding: 9px;
+    color: #333;
+}
