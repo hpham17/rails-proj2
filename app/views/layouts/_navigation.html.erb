@@ -25,7 +25,9 @@
     <li><%= link_to 'Edit Your Profile',edit_teaching_assistant_registration_path  %></li>
     <li><%= link_to 'Log Out', destroy_teaching_assistant_session_path, :method=>'delete' %></li>
     <% else %>
-    <li><%= link_to 'Log In', new_student_session_path %></li>
+    <li><%= link_to 'Log In As Student', new_student_session_path %></li>
+    <li><%= link_to 'Log In As Admin', new_admin_session_path %></li>
+    <li><%= link_to 'Log In As TA', new_teaching_assistant_session_path %></li>
     <li><%= link_to 'Join Evaluate.Me As Student', new_student_registration_path %></li>
     <li><%= link_to 'Join Evaluate.Me As TeachingAssistant', new_teaching_assistant_registration_path %></li>
     <li><%= link_to 'Join Evaluate.Me As Professor', new_admin_registration_path %></li>
