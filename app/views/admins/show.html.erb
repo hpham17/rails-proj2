@@ -7,7 +7,7 @@
          <p>Rating: <%= f.rating %></p>
         <p>Evaluation: <%= f.eval %></p>
     </div>
-    <% end %>
+<% end %>
 <% else %>
 <%= button_to "Evaluate Me", new_feedback_path, :class => "button medium", :method => :get %>
 <% end %>

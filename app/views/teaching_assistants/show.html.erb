@@ -1,5 +1,5 @@
-<% if teaching_assistant_signed_in? %>
-<h1>Your Evalutions</h1>
+<% if teaching_assistant_signed_in? || admin_signed_in? %>
+<h1><%= @ta.name %>'s Evaluations</h1>
 <%= @feedback.each do |f| %>
     <div class="thumbnail">
         <div class="title"><%= f.title %></div>
