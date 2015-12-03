@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 
+
 group :development do
   gem 'sqlite3'
   gem 'better_errors'
@@ -25,4 +26,5 @@ end
 group :production do
   gem 'pg'
   gem 'thin'
+  gem 'rails_12factor'
 end
