@@ -10,7 +10,7 @@
 
 #Make TAs
 %w(Howard Charles Sam Junyu Erica Warren Mei).each do |name|
-  Teaching_assistants.create! name: name, email: name+"@gmail.com", password: 'password12345', password_confirmation: 'password12345', course: 'rails'
+  TeachingAssistants.create! name: name, email: name+"@gmail.com", password: 'password12345', password_confirmation: 'password12345', course: 'rails'
 end
 
 i = 0
