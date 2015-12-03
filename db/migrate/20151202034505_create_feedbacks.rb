@@ -1,4 +1,5 @@
 class CreateFeedbacks < ActiveRecord::Migration
+  # include Admins
   def change
     create_table :feedbacks do |t|
       t.string :title
