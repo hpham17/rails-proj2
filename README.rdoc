@@ -1,28 +1,29 @@
-== README
+WRITEUP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Title: EvaluateMe
+Team Members: Hubert Pham, Ryan Riddle, Caydie Tran, Anthony Tran
+Demo Link: http://evaluate-me.herokuapp.com/
 
-Things you may want to cover:
+Idea: An application where students can write evaluations on instructors and teaching assistants and instructors and teaching assistants can view evaluations written by students. 
 
-* Ruby version
+Models and Description:
+Instructor (Admin)
+has name, email, password, and many Feedbacks
+Teaching Assistant
+has name, email, password, and many Feedbacks
+Student
+has name, email, password
+Feedback
+has title, rating, and eval and belongs to an Instructor or a Teaching Assistant
 
-* System dependencies
+Features:
+Instructors, Teaching Assistants, and Students can sign up and log in
+Students can write Feedbacks about Instructors and Teaching Assistants
+Instructors and Teaching Assistants can view their Feedbacks
 
-* Configuration
+Division of Labor:
+Hubert: Made Users models, views, and controllers (Instuctor, Teaching Assistant, and Student) and deployed to Heroku
+Ryan: Made Feedback Model, helped with models views and controllers and wrote seed file
+Caydie: Made views and controllers for Student and Feedback and helped with Feedback Model
+Anthony: Helped with views and controllers for Student and Feedback and wrote readme and was featured in demo video
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
