@@ -2,6 +2,11 @@
 	<%= p.input :title %>
 	<%= p.input :rating, collection: [6, 5, 4, 3, 2, 1]%>
 	<%= p.input :eval %>
+	<% if params[:which_user] == 'admin' %>
+	<%= p.hidden_field :admin_id, :value => params[:id] %>
+	<% else %>
+	<%= p.hidden_field :teaching_assistant_id, :value => params[:id] %>
+	<% end %>
 	<%= p.button :submit %>	
      
 <% end %>

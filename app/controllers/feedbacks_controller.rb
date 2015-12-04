@@ -1,6 +1,7 @@
 class FeedbacksController < ApplicationController
 	def new
 		@feedback = Feedback.new
+	
 	end
 
 	def create
@@ -11,6 +12,7 @@ class FeedbacksController < ApplicationController
 	end
 
 	def feedback_params
-		params.require(:feedback).permit(:title, :rating, :eval)
+		params.require(:feedback).permit(:title, :rating, :eval, :admin_id, :teaching_assistant_id)
 	end
+	
 end
