@@ -1,6 +1,6 @@
 <% if teaching_assistant_signed_in? || admin_signed_in? %>
 <h1><%= @ta.name %>'s Evaluations</h1>
-<%= @feedback.each do |f| %>
+<% @feedback.each do |f| %>
     <div class="thumbnail">
         <div class="title"><%= f.title %></div>
         <div class="caption"><%= f.created_at %></div>
@@ -9,5 +9,5 @@
     </div>
 <% end %>
 <% else %>
-<%= button_to "Evaluate Me", new_feedback_path, :class => "button medium", :method => :get %>
+<%= button_to "Evaluate Me", new_feedback_path(:id => @ta.id, :which_user => 'teaching_assistant'), :class => "button medium" %>
 <% end %>
